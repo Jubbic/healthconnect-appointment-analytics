@@ -1,6 +1,6 @@
 # HealthConnect Appointment Analytics
 
-**AnalystLab Africa Experience Lab — Data Analytics Track**  
+**AnalystLab Africa Experience Lab - Data Analytics Track**  
 **Intern:** Adeleke Jubril Adedeji
 
 ## Project Overview
@@ -19,8 +19,8 @@ This is a multi-week project, and each week builds on the work from the previous
 
 The analysis was carried out using:
 
-- **`HealthConnect_Appointment_Data.csv`** — 5,000 fictional and anonymised appointment records covering patient demographics, booking behaviour, reminders, clinic logistics, and appointment outcomes.
-- **`HealthConnect_Data_Dictionary`** — Used to understand the variables and what each column represents.
+- **`HealthConnect_Appointment_Data.csv`** - 5,000 fictional and anonymised appointment records covering patient demographics, booking behaviour, reminders, clinic logistics, and appointment outcomes.
+- **`HealthConnect_Data_Dictionary`** - Used to understand the variables and what each column represents.
 
 ## Week 4: Problem Understanding
 
@@ -59,7 +59,7 @@ These findings will guide the next stage of the project rather than relying on a
 **Python:** Pandas, NumPy, Matplotlib, Seaborn  
 **Environment:** Jupyter Notebook
 
-## Next Steps — Week 5
+## Next Steps - Week 5
 
 For Week 5, I’ll be focusing on:
 
