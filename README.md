@@ -70,5 +70,5 @@ For Week 5, I’ll be focusing on:
 
 ## Repo Structure
 
-- **Root**: Week 4 files (initial analysis notebook, project summary, dataset, data dictionary) — submitted for grading, kept in place until results are returned
-- **week5/**: Week 5 analysis notebook and project summary — deeper EDA, KPI calculations, dashboard, and business insights building on Week 4
+- **Root**: Week 4 files (initial analysis notebook, project summary, dataset, data dictionary) submitted for grading, kept in place until results are returned
+- **week5/**: Week 5 analysis notebook and project summary  deeper EDA, KPI calculations, dashboard, and business insights building on Week 4
