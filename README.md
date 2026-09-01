@@ -67,3 +67,8 @@ For Week 5, I’ll be focusing on:
 - Going deeper into the strongest predictors, especially booking lead time and previous no-show history
 - Looking at how some of the factors may interact with each other
 - Starting to organise the findings into something that can eventually become a dashboard or business-facing report
+
+## Repo Structure
+
+- **Root**: Week 4 files (initial analysis notebook, project summary, dataset, data dictionary) — submitted for grading, kept in place until results are returned
+- **week5/**: Week 5 analysis notebook and project summary — deeper EDA, KPI calculations, dashboard, and business insights building on Week 4
