@@ -1,6 +1,6 @@
 # HealthConnect Appointment Analytics
 
-**AnalystLab Africa Experience Lab — Data Analytics Track**
+**AnalystLab Africa Experience Lab - Data Analytics Track**
 **Intern:** Adeleke Jubril Adedeji
 
 ## Project Overview
