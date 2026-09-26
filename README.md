@@ -1,7 +1,6 @@
 # HealthConnect Appointment Analytics
 
-AnalystLab Africa Experience Lab - Data Analytics Track 
-
+AnalystLab Africa Experience Lab - Data Analytics Track  
 Intern: Adeleke Jubril Adedeji
 
 ## Project Overview
@@ -20,8 +19,8 @@ How can HealthConnect Clinic use data and AI to reduce missed appointments and i
 
 The analysis was carried out using:
 
-- `HealthConnect_Appointment_Data.csv` 5,000 fictional and anonymised appointment records covering patient demographics, booking behaviour, reminders, clinic logistics, and appointment outcomes.
-- `HealthConnect_Data_Dictionary` Used to understand the variables and what each column represents.
+- `HealthConnect_Appointment_Data.csv` - 5,000 fictional and anonymised appointment records covering patient demographics, booking behaviour, reminders, clinic logistics, and appointment outcomes.
+- `HealthConnect_Data_Dictionary` - Used to understand the variables and what each column represents.
 
 ## Week 4: Problem Understanding
 
@@ -38,7 +37,7 @@ Week 4 was mainly about getting familiar with the data and understanding what mi
 - The dataset was generally clean, with no duplicate records or major logical issues
 - Booking lead time and previous no-show history showed the strongest relationship with appointment outcomes
 - Reminder status showed some effect, but it was not as strong as the two factors above
-- Appointment day, gender and distance to the clinic showed little to no meaningful relationship with whether an appointment was missed
+- Appointment day, gender, and distance to the clinic showed little to no meaningful relationship with whether an appointment was missed
 
 ## Week 5: Analysis & KPI Development
 
@@ -75,20 +74,37 @@ Week 6 shifted from producing new EDA to validating and integrating the Week 5 w
 
 ## Week 7: Testing, Refinement & End-to-End Validation
 
-Week 7 moved from building and integrating new work into systematically testing and validating what was already delivered in Week 6, including a genuine cross-track (HC-POD) validation activity rather than a repeat of the Week 6 integration.
+Week 7 moved from building and integrating new work into systematically testing and validating what was already delivered in Week 6, including a genuine cross-track (Pod 05) validation activity rather than a repeat of the Week 6 integration.
 
 **What I did:**
 - Independently re-derived the composite risk score from raw data and confirmed it reproduces the exact Week 6 reported figures
 - Tested whether the risk pattern holds within every appointment type and age group individually, not just in aggregate
 - Retested the distance finding using quantile-based bins instead of the original fixed bins
 - Retested the reminder-effectiveness finding using effect size (Cohen's h) instead of relying on p-values alone
-- Ran an HC-POD cross-track test on the Week 6 Data Science handoff file checking it for nulls, duplicate keys and internal consistency
+- Ran a Pod 05 cross-track test on the Week 6 Data Science handoff file checking it for nulls, duplicate keys and internal consistency
 - Refined the dashboard's reminder chart to reflect the dimension that was actually tested
 
 **Key findings:**
-- The composite risk score, and the distance and reminder findings, all held up under independent retesting no reversals
+- The composite risk score, and the distance and reminder findings, all held up under independent retesting — no reversals
 - The cross-track test on the handoff file found a real issue: 86 unflagged missing values in `distance_to_clinic_km` (1.8% of rows)
 - Fixed by adding an explicit `distance_missing` indicator column and re-exporting the file (now 10 columns instead of 9) — Data Science should use this corrected version going forward
+
+## Week 8: Final Integration, Presentation & Project Showcase
+
+Week 8 was the final stage of the project consolidating the validated Weeks 4-7 work into a final decision-support package and a presentation of the complete HealthConnect solution.
+
+**What I did:**
+- Reconfirmed all final KPIs directly from raw data one last time
+- Finalised the analytics dashboard for presentation
+- Translated validated findings into a final set of business recommendations
+- Documented final integration readiness and the completed Pod 05 cross-track collaboration with Data Science
+- Prepared a final presentation deck and recorded an individual video walkthrough of the project
+
+**Key findings:**
+- No-show risk ranges from 29.5% (Low risk tier) to 76.1% (Very High risk tier), validated and stable across three independent weeks of testing
+- Reminder outreach is proven effective only for patients with exactly 2 prior no-shows (an 11.9-point reduction)
+- Patients 20-50km from the clinic show a confirmed, standalone higher no-show rate (60.5%)
+- The corrected Data Science handoff file (fixed in Week 7) was adopted for their final model
 
 ## Files in This Repository
 
@@ -98,31 +114,32 @@ Week 7 moved from building and integrating new work into systematically testing 
 | HealthConnect_Week4_Project_Summary_Adeleke_Jubril.docx | Summary of Week 4 work and planned focus for Week 5 |
 | HealthConnect_Appointment_Data.csv | Dataset used for the analysis |
 | HealthConnect_Data_Dictionary_Adeleke_Jubril.xlsx | Data dictionary and variable definitions |
-| week5/HealthConnect_Week5_Analysis_Adeleke_Jubril.ipynb | Deeper EDA, KPI calculations, dashboard, and business insights building on Week 4 |
+| week5/HealthConnect_Week5_Analysis_Adeleke_Jubril.ipynb | Deeper EDA, KPI calculations, dashboard and business insights building on Week 4 |
 | week5/HealthConnect_Week5_Project_Summary_Adeleke_Jubril.docx | Summary of Week 5 work and planned focus for Week 6 |
-| week6/HealthConnect_Week6_Advanced_Analytics_Adeleke_Jubril.ipynb | Validated composite risk score, revised findings, refined KPIs, and updated dashboard building on Week 5 |
+| week6/HealthConnect_Week6_Advanced_Analytics_Adeleke_Jubril.ipynb | Validated composite risk score, revised findings, refined KPIs and updated dashboard building on Week 5 |
 | week6/HealthConnect_Week6_Project_Summary_Adeleke_Jubril.docx | Summary of Week 6 work and planned focus for Week 7 |
 | week6/HealthConnect_Week6_RiskFeature_DataScience_Handoff.csv | Original validated risk feature file produced for the Data Science track (cross-track integration evidence) |
-| week7/HealthConnect_Week7_Testing_Refinement_Adeleke_Jubril.ipynb | Testing/validation log, KPI reproducibility checks, segment-stability testing, retested findings, refined dashboard, and HC-POD cross-track testing building on Week 6 |
+| week7/HealthConnect_Week7_Testing_Refinement_Adeleke_Jubril.ipynb | Testing/validation log, KPI reproducibility checks, segment-stability testing, retested findings, refined dashboard and Pod 05 cross-track testing building on Week 6 |
 | week7/HealthConnect_Week7_Project_Summary_Adeleke_Jubril.docx | Summary of Week 7 work and planned focus for Week 8 |
 | week7/HealthConnect_Week6_RiskFeature_DataScience_Handoff.csv | Corrected version of the Week 6 handoff file (added distance_missing flag after testing found unflagged nulls) |
+| week8/HealthConnect_Week8_Final_Analytics_Adeleke_Jubril.ipynb | Final KPIs, final dashboard, business insights/recommendations, final integration readiness, and Pod 05 cross-track final integration |
+| week8/HealthConnect_Week8_Final_Presentation_Adeleke_Jubril.pptx | Final presentation deck covering the full HealthConnect project |
+| week8/HealthConnect_Week8_Video_Script_Adeleke_Jubril.docx | Speaker script for the individual final video presentation |
+| week8/[video file] | Individual recorded video presentation (5-10 min) |
 
 ## Tools Used
 
 Python: Pandas, NumPy, Matplotlib, Seaborn, SciPy, scikit-learn  
 Environment: Jupyter Notebook
 
-## Next Steps - Week 8
+## Project Status
 
-For Week 8, I'll be focusing on:
-
-- Final integration of the tested and validated Week 7 outputs
-- Confirming Data Science has picked up the corrected risk-feature handoff file
-- Preparing final presentation materials
+Complete. The HealthConnect Experience Lab ran from Week 4 through Week 8 of the internship problem understanding through final integration and presentation and is fully documented in this repository.
 
 ## Repo Structure
 
 - **Root:** Week 4 files (initial analysis notebook, project summary, dataset, data dictionary) submitted for grading, kept in place until results are returned
-- **week5/:** Week 5 analysis notebook and project summary deeper EDA, KPI calculations, dashboard, and business insights building on Week 4
+- **week5/:** Week 5 analysis notebook and project summary deeper EDA, KPI calculations, dashboard and business insights building on Week 4
 - **week6/:** Week 6 analysis notebook, project summary, and original Data Science handoff file validated risk score, revised findings, and cross-track integration building on Week 5
-- **week7/:** Week 7 testing/validation notebook, project summary, and corrected Data Science handoff file retested findings and HC-POD cross-track testing building on Week 6
+- **week7/:** Week 7 testing/validation notebook, project summary, and corrected Data Science handoff file retested findings and Pod 05 cross-track testing building on Week 6
+- **week8/:** Final analytics notebook, final presentation deck, video script, and recorded video the complete, integrated HealthConnect solution
